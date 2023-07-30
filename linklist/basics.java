@@ -5,6 +5,7 @@ public class basics {
         int data;
         Node next;
 
+        // constructor
         public Node(int data) {
             this.data = data;
             this.next = null;
@@ -15,8 +16,9 @@ public class basics {
     public static Node tail;
 
     public static void main(String arg[]) {
-       // LinkedList ll = new LinkedList<>(); // we creat a new object of linkedlist class
-        
+        // LinkedList ll = new LinkedList<>(); // we creat a new object of linkedlist
+        // class
+
     }
 
 }

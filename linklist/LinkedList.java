@@ -41,6 +41,8 @@ public class LinkedList {
         }
         tail.next = newNode;
         tail = newNode;
+
+        //tail ka next default null hi hoga initialy
     }
 
     // ----------------------------------------------------------------------------
