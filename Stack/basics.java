@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 public class basics {
     // created a node class so that we can make linklist
     static class Node {
