@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class basics {
     // created a node class so that we can make linklist
     static class Node {
@@ -22,13 +23,13 @@ public class basics {
         // push
         public static void push1(int data) {
             Node newNode = new Node(data);// we created a new node which is going to be our nextnode
-            if (isEmpty1()) {// check if statck is empty thn we directly add/push element to it
+            if (isEmpty1()) {// check if stack is empty thn we directly add/push element to it
                 newNode = head;
                 return;
             }
             // if not thn we do this
             newNode.next = head;// newnode next pointing to the older node head
-            head = newNode; // storing newnode value to head so that nenode become head now
+            head = newNode; // storing newnode value to head so that newnode become head now
         }
 
         // pop
@@ -51,8 +52,9 @@ public class basics {
 
     }
 
+    // stack using ArrayList
     static class ArrStack {
-        static ArrayList<Integer> list = new ArrayList<>();// new arraylist of name lsit!
+        static ArrayList<Integer> list = new ArrayList<>();// new arraylist of name list!
 
         // yeh ek function hai to check is our list is empty
         public static boolean isEmpty() {
