@@ -5,12 +5,15 @@ public class NxtGrtr {
         int arr[] = { 6, 8, 0, 1, 3 };
         Stack<Integer> s = new Stack<>();
         int nxtgrtr[] = new int[arr.length];
+
+        // s.push(arr[arr.length-1]);
+        // nxtgrtr[arr.length-1]=-1;
         for (int i = arr.length - 1; i >= 0; i--) {
             // 1st work
-            // jab tak stack khali nah hojae agar currelement se chote element present hai
+            // jab tak stack khali nah hojae agar curr-element se chote element present hai
             // stack me toh unhe pop kardenge
             // stack khali hojaegi toh kya pop karoge
-            while (!s.isEmpty() && arr[s.peek()] <= arr[i]) {
+            while (!s.isEmpty() && s.peek() <= arr[i]) {
                 s.pop();
             }
             // 2nd
@@ -19,15 +22,15 @@ public class NxtGrtr {
             if (s.isEmpty()) {
                 nxtgrtr[i] = -1;
             } else {
-                nxtgrtr[i] = arr[s.peek()];
+                nxtgrtr[i] = s.peek();
             }
             // 3rd
             // stack me currelement add kardo after all condition check over it
-            s.push(i);
+            s.push(arr[i]);
         }
         // print nxtgrtr
         for (int i = 0; i < nxtgrtr.length; i++) {
-            System.out.println(nxtgrtr[i]);
+            System.out.print(nxtgrtr[i] + ", ");
         }
     }
 
