@@ -4,7 +4,7 @@ import java.util.*;;
 
 public class InterQueue {
     public static void interleave(Queue<Integer> q) {
-        Queue<Integer> newQueue = new LinkedList<>();
+        Queue<Integer> newQueue = new ArrayDeque<>();
         int size = q.size();
         for (int i = 0; i < size / 2; i++) {// agar size ko yah direct likhdenge toh loop me remove hone ke bad diff
                                             // size dega har bar humara queue
@@ -18,7 +18,7 @@ public class InterQueue {
     }
 
     public static void main(String arg[]) {
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new ArrayDeque<>();
         q.add(1);
         q.add(2);
         q.add(3);
