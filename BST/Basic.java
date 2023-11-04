@@ -35,6 +35,15 @@ public class Basic {
         inorder(root.right);
     }
 
+    public static void postorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.data + " ");
+    }
+
     public static void main(String args[]) {
         int values[] = { 5, 1, 3, 4, 2, 7 };
         Node root = null;
@@ -42,6 +51,8 @@ public class Basic {
             root = insert(root, values[i]);
         }
         inorder(root);
+        System.out.println();
+        postorder(root);
         System.out.println();
     }
 }
